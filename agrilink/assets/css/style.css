@@ -1,0 +1,187 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header .fa-leaf {
+    color: #8ed876;
+}
+
+/* Navigation */
+.navbar {
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Cards */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure cards containing modals don't have hover effects */
+.card:has(.modal),
+.card:has(.modal-dialog),
+tr:has(.modal),
+td:has(.modal),
+div:has(.modal),
+.modal-container {
+    transform: none !important;
+    transition: none !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Prevent hover effects on modal cards */
+.modal .card, .modal-content {
+    transform: none !important;
+    transition: none;
+}
+
+.modal .card:hover {
+    transform: none !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn-success, .btn-outline-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+/* Footer */
+footer {
+    border-top: 4px solid #28a745;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .fab {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+footer .fab:hover {
+    transform: scale(1.2);
+}
+
+/* Form Styles */
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+/* Product Details */
+.product-image {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+/* Dashboard */
+.dashboard-card {
+    border-left: 4px solid #28a745;
+}
+
+/* Order Status Colors */
+.status-pending {
+    color: #ffc107;
+}
+
+.status-confirmed {
+    color: #17a2b8;
+}
+
+.status-ready {
+    color: #fd7e14;
+}
+
+.status-completed {
+    color: #28a745;
+}
+
+.status-cancelled {
+    color: #dc3545;
+}
+
+/* Modal Styles */
+.modal,
+.modal-dialog,
+.modal-content,
+.modal *,
+.modal *:hover {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    pointer-events: auto !important;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+}
+
+.modal.fade .modal-dialog {
+    transform: none !important;
+    transition: none !important;
+}
+
+.modal.show .modal-dialog {
+    transform: none !important;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+}
+
+/* Modal Styles */
+.modal-open-no-hover * {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+.modal-open-no-hover .card:hover {
+    transform: none !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .card-img-top {
+        height: 150px;
+    }
+    
+    .jumbotron h1 {
+        font-size: 2rem;
+    }
+} 
